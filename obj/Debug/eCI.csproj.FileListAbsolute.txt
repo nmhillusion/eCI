@@ -1,0 +1,14 @@
+D:\projects\cSharp\eCI\eCI\bin\Debug\eCI.exe.config
+D:\projects\cSharp\eCI\eCI\bin\Debug\eCI.exe
+D:\projects\cSharp\eCI\eCI\bin\Debug\eCI.pdb
+D:\projects\cSharp\eCI\eCI\obj\Debug\eCI.csproj.AssemblyReference.cache
+D:\projects\cSharp\eCI\eCI\obj\Debug\eCI.csproj.SuggestedBindingRedirects.cache
+D:\projects\cSharp\eCI\eCI\obj\Debug\eCI.Properties.Resources.resources
+D:\projects\cSharp\eCI\eCI\obj\Debug\eCI.csproj.GenerateResource.cache
+D:\projects\cSharp\eCI\eCI\obj\Debug\eCI.csproj.CoreCompileInputs.cache
+D:\projects\cSharp\eCI\eCI\obj\Debug\eCI.exe
+D:\projects\cSharp\eCI\eCI\obj\Debug\eCI.pdb
+D:\projects\cSharp\eCI\eCI\obj\Debug\eCI.MainForm.resources
+D:\projects\cSharp\eCI\eCI\bin\Debug\YamlDotNet.dll
+D:\projects\cSharp\eCI\eCI\bin\Debug\YamlDotNet.xml
+D:\projects\cSharp\eCI\eCI\obj\Debug\eCI.csproj.CopyComplete
