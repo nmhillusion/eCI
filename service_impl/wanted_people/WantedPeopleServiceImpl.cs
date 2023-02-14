@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
-namespace eCI.service_impl
+namespace eCI.service_impl.wanted_people
 {
     internal class WantedPeopleServiceImpl : IWantedPeopleService
     {

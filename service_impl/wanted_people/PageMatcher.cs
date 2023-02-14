@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace eCI.service_impl
+namespace eCI.service_impl.wanted_people
 {
     internal class PageMatcher
     {

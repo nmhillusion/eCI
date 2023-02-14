@@ -1,6 +1,6 @@
 ﻿using eCI.helper;
 using eCI.service.wanted_people;
-using eCI.service_impl;
+using eCI.service_impl.wanted_people;
 using System;
 using System.Collections.Generic;
 
