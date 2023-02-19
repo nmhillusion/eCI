@@ -2,14 +2,12 @@
 {
     internal class WantedPeopleEntity
     {
-        private string fullName { get; set; }
-        private string birthday { get; set; }
-        private string place { get; set; }
-        private string nameOfParents { get; set; }
-        private string crime { get; set; }
-        private string decisionDate { get; set; }
-        private string decisionOffice { get; set; }
-
-
+        public string fullName { get; set; }
+        public string birthday { get; set; }
+        public string livePlace { get; set; }
+        public string nameOfParents { get; set; }
+        public string crimeName { get; set; }
+        public string decisionDate { get; set; }
+        public string decisionOffice { get; set; }
     }
 }

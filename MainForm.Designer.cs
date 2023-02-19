@@ -30,8 +30,11 @@
         {
             this.tabs_ = new System.Windows.Forms.TabControl();
             this.wantedPeopleTab = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnBrowseSavedFolder = new System.Windows.Forms.Button();
+            this.lblProgressStatus = new System.Windows.Forms.Label();
+            this.inpUrlOfWantedPeople = new System.Windows.Forms.TextBox();
+            this.btnCrawlWantedPeople = new System.Windows.Forms.Button();
+            this.inpSavedFilePath = new System.Windows.Forms.TextBox();
             this.tabs_.SuspendLayout();
             this.wantedPeopleTab.SuspendLayout();
             this.SuspendLayout();
@@ -47,8 +50,11 @@
             // 
             // wantedPeopleTab
             // 
-            this.wantedPeopleTab.Controls.Add(this.textBox1);
-            this.wantedPeopleTab.Controls.Add(this.button1);
+            this.wantedPeopleTab.Controls.Add(this.inpSavedFilePath);
+            this.wantedPeopleTab.Controls.Add(this.btnBrowseSavedFolder);
+            this.wantedPeopleTab.Controls.Add(this.lblProgressStatus);
+            this.wantedPeopleTab.Controls.Add(this.inpUrlOfWantedPeople);
+            this.wantedPeopleTab.Controls.Add(this.btnCrawlWantedPeople);
             this.wantedPeopleTab.Location = new System.Drawing.Point(4, 22);
             this.wantedPeopleTab.Name = "wantedPeopleTab";
             this.wantedPeopleTab.Padding = new System.Windows.Forms.Padding(3);
@@ -57,21 +63,49 @@
             this.wantedPeopleTab.Text = "Wanted People";
             this.wantedPeopleTab.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnBrowseSavedFolder
             // 
-            this.button1.Location = new System.Drawing.Point(637, 42);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Crawl Wanted People";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBrowseSavedFolder.Location = new System.Drawing.Point(696, 42);
+            this.btnBrowseSavedFolder.Name = "btnBrowseSavedFolder";
+            this.btnBrowseSavedFolder.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowseSavedFolder.TabIndex = 5;
+            this.btnBrowseSavedFolder.Text = "Browse";
+            this.btnBrowseSavedFolder.UseVisualStyleBackColor = true;
+            this.btnBrowseSavedFolder.Click += new System.EventHandler(this.btnBrowseSavedFolder_Click);
             // 
-            // textBox1
+            // lblProgressStatus
             // 
-            this.textBox1.Location = new System.Drawing.Point(4, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(767, 20);
-            this.textBox1.TabIndex = 3;
+            this.lblProgressStatus.AutoSize = true;
+            this.lblProgressStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProgressStatus.Location = new System.Drawing.Point(333, 169);
+            this.lblProgressStatus.Name = "lblProgressStatus";
+            this.lblProgressStatus.Size = new System.Drawing.Size(58, 31);
+            this.lblProgressStatus.TabIndex = 4;
+            this.lblProgressStatus.Text = "--/--";
+            // 
+            // inpUrlOfWantedPeople
+            // 
+            this.inpUrlOfWantedPeople.Location = new System.Drawing.Point(4, 7);
+            this.inpUrlOfWantedPeople.Name = "inpUrlOfWantedPeople";
+            this.inpUrlOfWantedPeople.Size = new System.Drawing.Size(767, 20);
+            this.inpUrlOfWantedPeople.TabIndex = 3;
+            // 
+            // btnCrawlWantedPeople
+            // 
+            this.btnCrawlWantedPeople.Location = new System.Drawing.Point(637, 94);
+            this.btnCrawlWantedPeople.Name = "btnCrawlWantedPeople";
+            this.btnCrawlWantedPeople.Size = new System.Drawing.Size(134, 23);
+            this.btnCrawlWantedPeople.TabIndex = 2;
+            this.btnCrawlWantedPeople.Text = "Crawl Wanted People";
+            this.btnCrawlWantedPeople.UseVisualStyleBackColor = true;
+            this.btnCrawlWantedPeople.Click += new System.EventHandler(this.btnCrawlWantedPeople_Click);
+            // 
+            // inpSavedFilePath
+            // 
+            this.inpSavedFilePath.Location = new System.Drawing.Point(4, 44);
+            this.inpSavedFilePath.Name = "inpSavedFilePath";
+            this.inpSavedFilePath.Size = new System.Drawing.Size(686, 20);
+            this.inpSavedFilePath.TabIndex = 6;
             // 
             // MainForm
             // 
@@ -92,8 +126,11 @@
 
         private System.Windows.Forms.TabControl tabs_;
         private System.Windows.Forms.TabPage wantedPeopleTab;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnCrawlWantedPeople;
+        private System.Windows.Forms.TextBox inpUrlOfWantedPeople;
+        private System.Windows.Forms.Label lblProgressStatus;
+        private System.Windows.Forms.Button btnBrowseSavedFolder;
+        private System.Windows.Forms.TextBox inpSavedFilePath;
     }
 }
 
