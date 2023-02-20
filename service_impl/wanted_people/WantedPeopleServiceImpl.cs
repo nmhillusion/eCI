@@ -22,41 +22,17 @@ namespace eCI.service_impl.wanted_people
 
             int pageNumber = 1;
             int totalPage;
-            long startTime;
+            long startTime_;
             do
             {
-                startTime = DateTime.Now.Ticks;
+                startTime_ = DateTime.Now.Ticks;
                 resultList.AddRange(CrawlOnePage(urlOfWantedPeople, pageNumber, out totalPage));
                 pageNumber += 1;
 
                 updateUI(this, $"progress {pageNumber}/{totalPage}");
 
-                while (DateTime.Now.Ticks - startTime < 1_000) ;
+                while (DateTime.Now.Ticks - startTime_ < 1_000) ;
             } while (totalPage >= pageNumber);
-
-            ExportExcelWorkbookData exportExcelData_ = new ExportExcelWorkbookData();
-            exportExcelData_.sheets.Add(
-                new ExportExcelSheetData
-                {
-                    sheetName = "Excellent Data",
-                    headers =
-                        {
-                            "ID", "Name", "Birthday"
-                        },
-                    data =
-                        {
-                            new List<string> {
-                                "1", "Nguyễn Văn A", "12/09/1992"
-                            },
-                            new List<string> {
-                                "2", "Nguyễn Văn B", "12/10/1996"
-                            },
-                        }
-
-                }
-            );
-
-            ExcelHelper.ExportData("D:\\hello.xlsx", exportExcelData_);
 
             updateUI(this, "completed");
 
@@ -65,7 +41,7 @@ namespace eCI.service_impl.wanted_people
 
         private List<WantedPeopleEntity> CrawlOnePage(string urlOfWantedPeople, int pageNumber, out int totalPage)
         {
-            List<WantedPeopleEntity> resultList = new List<WantedPeopleEntity>() { };
+            List<WantedPeopleEntity> resultList = new List<WantedPeopleEntity>();
 
             //HttpHelper httpHelper = InstanceFactory.GetInstanceOfType<HttpHelper>();
 
@@ -76,13 +52,12 @@ namespace eCI.service_impl.wanted_people
             //Debug.WriteLine("wanted people page: " + pageContent);
 
             PageMatcher.ParsePagerInfoCell(pageContent, out string pageNumber_, out string totalPages_);
-            Debug.WriteLine("pageInfo: " + pageNumber_ + " / " + totalPages_);
-
+            
             totalPage = Convert.ToInt16(totalPages_);
 
             resultList = PageMatcher.ParseListWantedPeople(pageContent);
 
-            Debug.WriteLine("[info] listOfWantedPeople: " + resultList.Count);
+            Debug.WriteLine("[info] size of wanted people on this page: " + resultList.Count);
 
             return resultList;
         }
